@@ -1,7 +1,7 @@
 {
-  "name": "wisdom-store",
+  "name": "miniprogram",
   "version": "1.0.0",
-  "description": "bring knowledge to u",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
