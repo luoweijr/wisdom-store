@@ -31,13 +31,7 @@
     "enableEngineNative": false,
     "useIsolateContext": true,
     "userConfirmedBundleSwitch": false,
-    "packNpmManually": true,
-    "packNpmRelationList": [
-      {
-        "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./"
-      }
-    ],
+    "packNpmManually": false,
     "minifyWXSS": true,
     "showES6CompileOption": false
   },
