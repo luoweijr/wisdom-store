@@ -1,0 +1,1 @@
+"E:\Program Files\wechatdevtool\cli.bat" cloud functions deploy --e cloud1-8gdr5keg872fbabf --n quickstartFunctions --r --project "E:\GitClone\wisdom-store" && "E:\Program Files\wechatdevtool\cli.bat" cloud functions deploy --e test1-7geyrua9048724ef --n quickstartFunctions --r --project "E:\GitClone\wisdom-store" --report
