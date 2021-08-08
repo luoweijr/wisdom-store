@@ -59,7 +59,7 @@ Page({
       }]
     }],
     envList,
-    selectedEnv: envList[0],
+    selectedEnv: {"envId":"test1-7geyrua9048724ef","alias":"test1"},
     haveCreateCollection: false
   },
 
@@ -89,15 +89,14 @@ Page({
   },
 
   onChangeSelectedEnv(index) {
-    if (this.data.selectedEnv.envId === this.data.envList[index].envId) {
-      return
-    }
+    // if (this.data.selectedEnv.envId === this.data.envList[index].envId) {
+    //   return
+    // }
     const powerList = this.data.powerList
     powerList.forEach(i => {
       i.showItem = false
     })
     this.setData({
-      selectedEnv: this.data.envList[index],
       powerList,
       haveCreateCollection: false
     })
