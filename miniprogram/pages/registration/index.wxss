@@ -1,1 +1,5 @@
 /* miniprogram/pages/registration/index.wxss */
+.van-cell-value {
+    text-align: left !important;
+    min-width: 70%;
+}

@@ -21,16 +21,14 @@
   <van-field value="{{ moblie }}" label="手机号" placeholder="请输入手机号" required>
     <van-button slot="button" size="small" type="primary">发送验证码</van-button>
   </van-field>
-  <van-field value="{{ gender }}" bind:click-input="onGenderInputClick" label="性别" placeholder="请选择性别" required>
-  </van-field>
+  <van-cell value-class="van-cell-value" title="性别" value="{{ gender }}" required is-link bind:click="onGenderInputClick"></van-cell>
   <van-popup show="{{ genderPopupShow }}" position="bottom">
     <van-picker columns="{{ genderColumns }}" default-index="{{ 0 }}" bind:confirm="onGenderConfirm"
       bind:cancel="onGenderCancel" show-toolbar>
     </van-picker>
   </van-popup>
 
-  <van-field value="{{ birthday }}" bind:click-input="onBirthdayInputClick" label="生日" placeholder="请填写">
-  </van-field>
+  <van-cell value-class="van-cell-value" title="生日" value="{{ birthday }}" required is-link bind:click="onBirthdayInputClick"></van-cell>
   <van-popup show="{{ birthdayPopupShow }}" position="bottom">
     <van-datetime-picker type="date" value="{{ birthdayCurrDate }}" min-date="{{ birthdayMinYear }}" show-toolbar
       bind:confirm="onBirthdayConfirm" bind:cancel="onBirthdayCancel" formatter="{{ formatter }}">
