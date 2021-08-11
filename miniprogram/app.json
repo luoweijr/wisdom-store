@@ -24,6 +24,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
+    "van-uploader": "@vant/weapp/uploader/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-datetime-picker": "@vant/weapp/datetime-picker/index",
     "van-image": "@vant/weapp/image/index",

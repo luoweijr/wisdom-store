@@ -15,6 +15,7 @@ Page({
     birthday: '',
     birthdayMinYear: new Date(1959, 1, 1).getTime(),
     birthdayCurrDate: new Date(1980, 1, 1).getTime(),
+    fileList: [],
     formatter(type, value) {
       if (type === 'year') {
         return `${value}年`;
@@ -70,6 +71,24 @@ Page({
   onBirthdayCancel: function (options) {
     this.setData({
       birthdayPopupShow: false,
+    });
+  },
+
+  onAfterRead: function (options) {
+    const { file } = options.detail;
+    console.log(options);
+    let tempList = this.data.fileList;
+    tempList.push(...file);
+    this.setData({
+      fileList: tempList 
+    });
+  },
+
+  onDeleteFile: function (options) {
+    let list = this.data.fileList;
+    list.splice(options.detail.index, 1);
+    this.setData({
+      fileList: list
     });
   },
 

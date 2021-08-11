@@ -34,6 +34,7 @@
       bind:confirm="onBirthdayConfirm" bind:cancel="onBirthdayCancel" formatter="{{ formatter }}">
     </van-datetime-picker>
   </van-popup>
+  <van-uploader file-list="{{ fileList }}" max-count="5"  upload-text="点击上传文件" multiple="true" bind:after-read="onAfterRead" bind:delete="onDeleteFile"></van-uploader>
   <van-button type="primary">确定</van-button>
   <van-button >取消</van-button>
 </van-cell-group>
