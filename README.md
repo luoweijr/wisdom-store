@@ -1,12 +1,18 @@
-# 云开发 quickstart
+# 智慧商店   
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+## 环境准备   
+-[微信小程序开发工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)   
+node环境
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+## 安装依赖
+```
+cd miniprogram && npm install 
+**如果npm安装很慢,请执行以下设置**  
+npm config set registry https://registry.npm.taobao.org
+```
 
 ## 参考文档
-
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+- [小程序开发](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+- [vant组件](https://youzan.github.io/vant-weapp/#/home)
 
