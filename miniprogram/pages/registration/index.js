@@ -1,4 +1,11 @@
 // miniprogram/pages/registration/index.js
+const genderColumns = ['男', '女'];
+const subjectColumns = {
+  小学: ['语文', '数学', '英语'],
+  初中: ['语文', '数学', '英语', '物理', '化学', '生物', '政治', '历史', '地理'],
+  高中: ['语文', '数学', '英语', '物理', '化学', '生物', '政治', '历史', '地理'],
+  艺术类: ['音乐', '书法', '绘画', '乐器']
+};
 Page({
 
   /**
@@ -10,12 +17,25 @@ Page({
     gender: '',
     genderId: 1,
     genderPopupShow: false,
-    genderColumns: ['男', '女'],
+    genderColumns: genderColumns,
     birthdayPopupShow: false,
     birthday: '',
     birthdayMinYear: new Date(1959, 1, 1).getTime(),
     birthdayCurrDate: new Date(1980, 1, 1).getTime(),
     fileList: [],
+    school: '',
+    major: '',
+    secondMajor: '',
+    address: '',
+    subjectPopupShow: false,
+    subjectColumns: [
+      {
+        values: Object.keys(subjectColumns),
+      },
+      {
+        values: subjectColumns['小学'],
+      }
+    ],
     formatter(type, value) {
       if (type === 'year') {
         return `${value}年`;
@@ -72,6 +92,32 @@ Page({
     this.setData({
       birthdayPopupShow: false,
     });
+  },
+
+  /**
+   * 学科
+   */
+  onSubjectInputClick: function (options) {
+    this.setData({
+      subjectPopupShow: true
+    });
+  },
+
+  onSubjectConfirm: function (options) {
+    this.setData({
+      subjectPopupShow: false 
+    });
+  },
+
+  onSubjectCancel: function (options) {
+    this.setData({
+      subjectPopupShow: false 
+    });
+  },
+
+  onSubjectChange: function (options) {
+    const { picker, value, index } = options.detail;
+    picker.setColumnValues(1, subjectColumns[value[0]]);
   },
 
   onAfterRead: function (options) {
