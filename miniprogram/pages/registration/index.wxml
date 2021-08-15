@@ -32,7 +32,7 @@
   </view>
   <view class="block-box">
     <text class="title">家教信息</text>
-    <van-cell label="擅长学科" placeholder="点击选择" bind:click="onSubjectInputClick" is-link>
+    <van-cell value-class="van-cell-value" value="{{ subject }}" label="擅长学科" placeholder="点击选择" bind:click="onSubjectInputClick" is-link>
       <!-- <van-button slot="button" size="small" type="primary">发送验证码</van-button> -->
     </van-cell>
     <van-popup show="{{ subjectPopupShow }}" position="bottom">

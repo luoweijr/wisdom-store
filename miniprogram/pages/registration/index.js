@@ -36,6 +36,7 @@ Page({
         values: subjectColumns['小学'],
       }
     ],
+    subject: '',
     formatter(type, value) {
       if (type === 'year') {
         return `${value}年`;
@@ -105,6 +106,7 @@ Page({
 
   onSubjectConfirm: function (options) {
     this.setData({
+      subject: options.detail.value[0] + '-' + options.detail.value[1],
       subjectPopupShow: false 
     });
   },
