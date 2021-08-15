@@ -3,3 +3,10 @@
     text-align: left !important;
     min-width: 70%;
 }
+.block-box {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
