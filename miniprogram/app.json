@@ -1,5 +1,4 @@
 {
-  "entryPagePath": "pages/registration/index",
   "pages": [
     "pages/index/index",
     "pages/getOpenId/index",
@@ -13,7 +12,8 @@
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
     "pages/sumRecordResult/index",
-    "pages/registration/index"
+    "pages/user/reg/index",
+    "pages/order/forTutor"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -34,5 +34,5 @@
     "van-button": "@vant/weapp/button/index",
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index"
-}
+  }
 }
