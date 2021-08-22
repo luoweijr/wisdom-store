@@ -40,5 +40,16 @@
         bind:cancel="onSubjectCancel" bind:change="onSubjectChange" show-toolbar>
       </van-picker>
     </van-popup>
+    <van-field value="{{ salary }}" label="课程价格" placeholder="请输入课程价格(以小时计费)">
+    </van-field>
+    <!-- <view>
+      <van-row>
+        <van-col span="4">空闲时间:</van-col>
+        <van-col span="2">周一</van-col>
+        <van-col span="12">空闲时间:</van-col>
+        <van-col span="12">空闲时间:</van-col>
+        <van-col span="12">空闲时间:</van-col>
+      </van-row>
+    </view> -->
   </view>
 </view>
