@@ -1,4 +1,5 @@
 {
+  "entryPagePath": "pages/index/index",
   "pages": [
     "pages/index/index",
     "pages/getOpenId/index",
@@ -12,15 +13,14 @@
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
     "pages/sumRecordResult/index",
-    "pages/user/reg/index",
-    "pages/order/forTutor"
+    "pages/user/reg/index"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#14b9de",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#3963BC",
+    "navigationBarTitleText": "包子教育",
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {

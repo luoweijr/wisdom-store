@@ -1,31 +1,45 @@
 <!--index.wxml-->
 <view class="container">
+  <view class="page-section page-section-spacing swiper">
+      <swiper class="slide-image1"
+        indicator-dots="true" autoplay="true" circular="true" interval="2000" duration="500" easing-function="easeInOutCubic">
+        <block wx:for="{{imageUrls}}">
+          <swiper-item class="slide-image2">
+            <image src="{{item}}" class="slide-image3" />
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
 
-  <view class="title">快速了解云开发</view>
-
-  <view class="top_tip">免鉴权接口调用 免部署后台 高并发</view>
-
-  <view class="power" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
-    <view class="power_info" data-index="{{index}}" bindtap="onClickPowerInfo">
-      <view class="power_info_text">
-        <view class="power_info_text_title">{{power.title}}</view>
-        <view class="power_info_text_tip">{{power.tip}}</view>
-      </view>
-      <image wx:if="{{!power.showItem}}" class="power_info_more" src="../../images/arrow.svg"></image>
-      <image wx:if="{{power.showItem}}" class="power_info_less" src="../../images/arrow.svg"></image>
-    </view>
-    <view wx:if="{{power.showItem}}">
-      <view wx:key="title" wx:for="{{power.item}}">
-        <view class="line"></view>
-        <view class="power_item" bindtap="jumpPage" data-page="{{item.page}}">
-          <view class="power_item_title">{{item.title}}</view>
-          <image class="power_item_icon" src="../../images/arrow.svg"></image>
-        </view>
+  <view class="wrp-contaier">
+    <view class="wrp-box wrp-1" wx:for="{{teachNav}}" wx:key="index">
+      <view class="wrp-icon" style="background-image: url({{item.images}});">
+        <span class="wrp-text" style="position: relative; top: 40px;">{{item.text}}</span>
       </view>
     </view>
   </view>
 
-  <!-- <view class="environment" bindtap="onChangeShowEnvChoose">当前环境 {{ selectedEnv.alias }}</view> -->
+
+  <view class="wrp-contaier-1">
+    <view class="wrp-button wrp-2" ><p class="wrp-p" >我要请家教</p></view>
+    <view class="wrp-button wrp-2" ><p class="wrp-p" >我要做教员</p></view>
+  </view>
+  
+  <view class="novel-container">
+    <view class="novel-title" >教师风采</view>
+    <view class="novel-content" wx:for="{{novel}}">
+      <view class="wrp-pic">
+        <span class="novel-pic" style="background-image: url({{item.imagePath}});"></span>
+      </view>
+      <view class="wrp-name">
+        <span class="novel-name">{{item.name}}</span>
+      </view>
+      <view class="wrp-call">
+        <a href="#" class="btn-gradient cyan mini">拨打电话</a>
+      </view>
+        <text class="novel-comment">{{item.comment}}</text>
+    </view>
+  </view>
 
   <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
 

@@ -10,11 +10,12 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 
-# 避免提交的文件夹
+# 锟斤拷锟斤拷锟结交锟斤拷锟侥硷拷锟斤拷
 miniprogram_npm
 node_modules
 .vscode
 
-# 避免提交的文件
+# 锟斤拷锟斤拷锟结交锟斤拷锟侥硷拷
 yarn.lock
 yarn-error.lock
+**/package-lock.json

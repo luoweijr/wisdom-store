@@ -1,94 +1,272 @@
-/**index.wxss**/
+@import "../../style/weui.wxss";
 
 page {
-  padding-top: 54rpx;
-  background-color: #f6f6f6;
-  padding-bottom: 60rpx;
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
 }
-
-.title {
-  font-family: PingFang SC;
-  font-weight: 500;
-  color: #000000;
-  font-size: 44rpx;
-  margin-bottom: 40rpx;
+.page-body{
+  padding: 60rpx;
 }
-
-.top_tip {
-  font-size: 28rpx;
-  font-family: PingFang SC;
-  font-weight: 400;
-  color: #888888;
-  margin-bottom: 28rpx;
+.page-section{
+  width: 100%;
+  text-align: center;
+  height: 190px;
+  background-image: linear-gradient( #3963BC, #14b9de);
 }
-
-.power {
-  margin-top: 30rpx;
-  border-radius: 5px;
-  background-color: white;
-  width: 93%;
-  padding-bottom: 1rpx;
-}
-
-.power_info {
-  display: flex;
-  padding: 30rpx 25rpx;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.power_info_more {
-  width: 30rpx;
-  height: 30rpx;
-  transform: rotate(90deg);
-}
-
-.power_info_less {
-  width: 30rpx;
-  height: 30rpx;
-  transform: rotate(270deg);
-}
-
-.power_info_text {
+.page-section_center{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-
-.power_info_text_title {
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.page-section-spacing{
+  box-sizing: border-box;
+  padding: 0rpx;
+}
+.page-section-title{
+  font-size: 28rpx;
+  color: #999999;
   margin-bottom: 10rpx;
-  font-weight: 400;
-  font-size: 35rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.page-section-gap .page-section-title{
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.power_info_text_tip {
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 25rpx;
+
+.page-section-title{
+  padding: 0;
+}
+.swiper-item{
+  display: block;
+  height: 150px;
+}
+.slide-image1{
+  border-radius: 10px;
+  position: relative;
+  top: 20px;
+}
+.slide-image2{
+  border-radius: 10px;
+}
+.slide-image3{
+  border-radius: 10px;
+  height: 150px;
+}
+.page-section-title{
+  margin-top: 60rpx;
+  position: relative;
 }
 
-.power_item {
-  padding: 30rpx 25rpx;
+.flex-contaier {
+  display: flex;
+}
+.flex-wrp{
+  display:flex;
+}
+.flex-item{
+  width: 80rpx;
+  height: 80rpx;
+  font-size: 26rpx;
+  margin: 10px;
+}
+
+.novel{
+  display: flex;
+}
+.novel-details{
+  display: flex;
+  flex-direction: column;
+  width: 500rpx
+}
+.novel-image{
+  width: 200rpx;
+  height: 200rpx
+}
+/* 中间导航的样式在此 */
+.wrp-contaier {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  height: 180px;
 }
-
-.power_item_title {
-  font-size: 30rpx;
+.wrp-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
 }
-
-.power_item_icon {
-  width: 30rpx;
-  height: 30rpx;
+.wrp-icon {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-.line {
-  width: 95%;
-  margin: 0 auto;
-  height: 2rpx;
-  background-color: rgba(0, 0, 0, 0.1);
+.wrp-text {
+  display: block;
+  text-align: center;
+  width: 40px;
+  height: 30px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color: #000000;
 }
-
-.environment {
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 24rpx;
-  margin-top: 25%;
+.wrp-1 {
+  width: 15%;
+}
+/* 下面点的家教 教员按钮 */
+.wrp-contaier-1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100px;
+}
+.wrp-2 {
+  width: 40%;
+  margin: 10px;
+  text-align: center;
+  color:rgb(255, 174, 0);
+  font-size: 24px;
+  box-shadow:4px 4px 5px 3px #999;
+  border-radius: 10px;
+}
+.wrp-button {
+  background: #3498db;
+  /* width: 180px; */
+  padding: 4px 0;
+  transform: translateX(0%) translateY(35%);
+  border-radius: 3px;
+  height: 40px;
+}
+.wrp-button.wrp-p {
+  font-family: "Roboto";
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.wrp-button:hover {
+  cursor: pointer;
+}
+.wrp-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: #927608;
+  opacity: 0.4;
+  bottom: -20px;
+}
+/* 教师风采样式 */
+.novel-title {
+  background: #2B6695;
+  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+  color: #FFFFFF;
+  font-family:"微软雅黑", "宋体", "黑体", Arial;
+  font-size: 22px;
+  font-weight: bold;
+  height: 25px;
+  line-height: 25px;
+  margin: 10px 0;
+  padding: 8px 0 5px 5px;
+  text-shadow: 2px 2px 3px #222222;
+}
+.novel-content {
+  height: auto;
+  padding-top: 2px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  box-shadow: 0  0px  10px  0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.wrp-pic {
+  width: 24%;
+}
+.novel-pic {
+  display: block;
+  width: 90px;
+  height: 90px;
+  background-size: 100%;
+  background: no-repeat center center;
+  border-radius: 50%;
+}
+.wrp-name {
+  width: 49%;
+  text-align: left;
+}
+.novel-name {
+  font-size: 18px;
+  font-weight: 800;
+  display: block;
+  padding: 4px;
+}
+.wrp-call {
+  width: 25%;
+}
+.novel-call{
+  display: block;
+  text-align: center;
+  padding: 4px;
+}
+.novel-comment {
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  line-height: 1.2em;
+  padding: 4px 0 10px 4px;
+}
+/* Gradient buttons */
+.btn-gradient {
+	text-decoration: none;
+	color: white;
+	padding: 10px 30px;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+/* Gradient - ugly css is ugly */
+.btn-gradient {
+	margin: 5px;
+}
+.btn-gradient.mini {
+  padding: 4px 12px;  
+  font-size: 12px;
+}
+.btn-gradient.cyan {
+	background: rgba(27,188,194,1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(27,188,194,1)), to(rgba(24,163,168,1)));
+	background: -webkit-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+	background: -moz-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+	background: -o-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+	background: linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1bbcc2', endColorstr='#18a3a8', GradientType=0);
+}
+.btn-gradient.cyan:active {
+  background: #169499;
 }
