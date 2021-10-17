@@ -21,8 +21,8 @@
 
 
   <view class="wrp-contaier-1">
-    <view class="wrp-button wrp-2" ><p class="wrp-p" >我要请家教</p></view>
-    <view class="wrp-button wrp-2" ><p class="wrp-p" >我要做教员</p></view>
+    <view class="wrp-button wrp-2" ><p class="wrp-p" >教师风采</p></view>
+    <view class="wrp-button wrp-2" ><p class="wrp-p" >订单列表</p></view>
   </view>
   
   <view class="tutor-container">
