@@ -25,19 +25,19 @@
     <view class="wrp-button wrp-2" ><p class="wrp-p" >我要做教员</p></view>
   </view>
   
-  <view class="novel-container">
-    <view class="novel-title" >教师风采</view>
-    <view class="novel-content" wx:for="{{novel}}">
+  <view class="tutor-container">
+    <view class="tutor-title" >教师风采</view>
+    <view class="tutor-content" wx:for="{{tutors}}">
       <view class="wrp-pic">
-        <span class="novel-pic" style="background-image: url({{item.imagePath}});"></span>
+        <span class="tutor-pic" style="background-image: url({{item.avatar}});"></span>
       </view>
       <view class="wrp-name">
-        <span class="novel-name">{{item.name}}</span>
+        <span class="tutor-name">{{item.name}}</span>
       </view>
       <view class="wrp-call">
         <a href="#" class="btn-gradient cyan mini">拨打电话</a>
       </view>
-        <text class="novel-comment">{{item.comment}}</text>
+        <text class="tutor-comment">{{item.comment}}</text>
     </view>
   </view>
 

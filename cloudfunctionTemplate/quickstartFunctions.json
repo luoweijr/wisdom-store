@@ -1,0 +1,9 @@
+[
+  {
+    "name": "获取用户列表",
+    "value": {
+      "type": "user",
+      "func": "getUserList"
+    }
+  }
+]
