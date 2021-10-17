@@ -80,19 +80,6 @@ page {
   font-size: 26rpx;
   margin: 10px;
 }
-
-.tutor{
-  display: flex;
-}
-.tutor-details{
-  display: flex;
-  flex-direction: column;
-  width: 500rpx
-}
-.tutor-image{
-  width: 200rpx;
-  height: 200rpx
-}
 /* 中间导航的样式在此 */
 .wrp-contaier {
   display: flex;
@@ -176,6 +163,9 @@ page {
   bottom: -20px;
 }
 /* 教师风采样式 */
+.tutor-container {
+  width: 100%;
+}
 .tutor-title {
   background: #2B6695;
   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
@@ -209,9 +199,9 @@ page {
   display: block;
   width: 90px;
   height: 90px;
-  background-size: 100%;
+  /* background-size: 100%;
   background: no-repeat center center;
-  border-radius: 50%;
+  border-radius: 50%; */
 }
 .wrp-name {
   width: 49%;
