@@ -1,0 +1,19 @@
+<!-- footer menu -->
+<view class="tab-bar" style="height: {{barHeight}}">
+  <view 
+		wx:for="{{list}}" 
+		wx:key="index" 
+		class="tab-bar-item" 
+		data-path="{{item.pagePath}}" 
+		data-index="{{index}}" 
+		bindtap="switchTab"
+	>
+    <image 
+			mode="widthFix" class="icon {{'icon'+(index+1)}}" 
+			src="{{selected === index ? item.selectedIconPath : item.iconPath}}"
+		></image>
+    <view class="text-label" style="color:{{selected === index ? selectedColor : color}}">
+			{{item.text}}
+		</view>
+  </view>
+</view>
