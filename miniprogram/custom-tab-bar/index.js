@@ -56,7 +56,6 @@ Component({
 			this.setData({
 				selected: data.index
 			})
-			console.log(data.index)
 		},
 	}
 })

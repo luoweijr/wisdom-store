@@ -1,5 +1,6 @@
-Page({
+const getOpenIdBarIndex = 1; 
 
+Page({
   /**
    * 页面的初始数据
    */
@@ -15,7 +16,13 @@ Page({
       envId: options.envId
     })
   },
-
+	onShow: function () {
+		if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+			this.getTabBar().setData({
+				selected: getOpenIdBarIndex
+			})
+		}
+	},
   getOpenId() {
     wx.showLoading({
       title: '',

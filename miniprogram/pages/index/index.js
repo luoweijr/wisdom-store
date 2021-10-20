@@ -1,6 +1,7 @@
 //index.js
 const app = getApp()
 const { envList } = require('../../envList.js')
+const indexTabBarIndex = 0;
 
 Page({
   data: {
@@ -24,6 +25,7 @@ Page({
   },
   
   onShow() {
+    this.activePageTabBar()
     wx.cloud.callFunction({
       name: 'quickstartFunctions',
       data: {
@@ -38,6 +40,12 @@ Page({
       console.log(e)
     })
   },
-
+  activePageTabBar() {
+    if (typeof this.getTabBar == 'function' && this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: indexTabBarIndex
+      })
+    }
+  }
 
 })
