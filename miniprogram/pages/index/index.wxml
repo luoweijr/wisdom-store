@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="page-section page-section-spacing swiper">
-      <swiper class="slide-image1"
+      <swiper class="slide-image1" style="height: 290rpx;"
         indicator-dots="true" autoplay="true" circular="true" interval="2000" duration="500" easing-function="easeInOutCubic">
         <block wx:for="{{imageUrls}}">
           <swiper-item class="slide-image2">
@@ -13,8 +13,9 @@
 
   <view class="wrp-contaier">
     <view class="wrp-box wrp-1" wx:for="{{teachNav}}" wx:key="index">
-      <view class="wrp-icon" style="background-image: url({{item.images}});">
-        <span class="wrp-text" style="position: relative; top: 40px;">{{item.text}}</span>
+      <image class="wrp-icon" src="{{item.images}}"></image>
+      <view class="wrp-text" style="position: relative; top: 40px;">
+        {{item.text}}
       </view>
     </view>
   </view>

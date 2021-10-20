@@ -12,7 +12,7 @@ page {
 .page-section{
   width: 100%;
   text-align: center;
-  height: 190px;
+  height: 366rpx;
   background-image: linear-gradient( #3963BC, #14b9de);
 }
 .page-section_center{
@@ -29,7 +29,7 @@ page {
 }
 .page-section-spacing{
   box-sizing: border-box;
-  padding: 0rpx;
+  padding: 0;
 }
 .page-section-title{
   font-size: 28rpx;
@@ -49,19 +49,19 @@ page {
 }
 .swiper-item{
   display: block;
-  height: 150px;
+  height: 290rpx;
 }
 .slide-image1{
-  border-radius: 10px;
-  position: relative;
-  top: 20px;
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
 }
 .slide-image2{
-  border-radius: 10px;
+  border-radius: 10rpx;
 }
 .slide-image3{
-  border-radius: 10px;
-  height: 150px;
+  border-radius: 10rpx;
+  height: 290rpx;
 }
 .page-section-title{
   margin-top: 60rpx;
@@ -71,41 +71,32 @@ page {
 .flex-contaier {
   display: flex;
 }
-.flex-wrp{
-  display:flex;
-}
-.flex-item{
-  width: 80rpx;
-  height: 80rpx;
-  font-size: 26rpx;
-  margin: 10px;
-}
+
 /* 中间导航的样式在此 */
 .wrp-contaier {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 180px;
+  height: 100%;
 }
 .wrp-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90px;
+  height: 150rpx;
 }
 .wrp-icon {
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
 }
 .wrp-text {
   display: block;
   text-align: center;
-  width: 40px;
-  height: 30px;
-  line-height: 30px;
-  font-size: 12px;
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 500;
   color: #000000;
@@ -119,24 +110,24 @@ page {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  height: 100px;
+  margin-top: 10rpx;
+  margin-bottom: 60rpx;
 }
 .wrp-2 {
   width: 40%;
-  margin: 10px;
+  margin: 20rpx;
   text-align: center;
   color:rgb(255, 174, 0);
-  font-size: 24px;
-  box-shadow:4px 4px 5px 3px #999;
-  border-radius: 10px;
+  font-size: 48rpx;
+  box-shadow:8rpx 8rpx 10rpx 6rpx #999;
+  border-radius: 20rpx;
 }
 .wrp-button {
   background: #3498db;
-  /* width: 180px; */
-  padding: 4px 0;
+  padding: 8rpx 0;
   transform: translateX(0%) translateY(35%);
-  border-radius: 3px;
-  height: 40px;
+  border-radius: 6rpx;
+  height: 80rpx;
 }
 .wrp-button.wrp-p {
   font-family: "Roboto";
@@ -161,32 +152,33 @@ page {
   border-radius: 50%;
   background-color: #927608;
   opacity: 0.4;
-  bottom: -20px;
+  bottom: -40rpx;
 }
 /* 教师风采样式 */
 .tutor-container {
   width: 100%;
+  margin-top: 10rpx;
 }
 .tutor-title {
   background: #2B6695;
-  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 2rpx #5F5A4B, 2rpx 2rpx 12rpx 2rpx rgba(10, 10, 0, 0.5);
   color: #FFFFFF;
   font-family:"微软雅黑", "宋体", "黑体", Arial;
-  font-size: 22px;
+  font-size: 44rpx;
   font-weight: bold;
-  height: 25px;
-  line-height: 25px;
-  margin: 10px 0;
-  padding: 8px 0 5px 5px;
-  text-shadow: 2px 2px 3px #222222;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 20rpx 0;
+  padding: 16rpx 0 10rpx 10rpx;
+  text-shadow: 4rpx 4rpx 6rpx #222222;
 }
 .tutor-content {
   height: auto;
-  padding-top: 2px;
-  margin-bottom: 15px;
+  padding-top: 4rpx;
+  margin-bottom: 30rpx;
   background-color: #ffffff;
-  box-shadow: 0  0px  10px  0 rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
+  box-shadow: 0  0  20rpx  0 rgba(0, 0, 0, 0.05);
+  border-radius: 10rpx;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -198,8 +190,8 @@ page {
 }
 .tutor-pic {
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 180rpx;
+  height: 180rpx;
   /* background-size: 100%;
   background: no-repeat center center;
   border-radius: 50%; */
@@ -209,10 +201,10 @@ page {
   text-align: left;
 }
 .tutor-name {
-  font-size: 18px;
+  font-size: 36rpx;
   font-weight: 800;
   display: block;
-  padding: 4px;
+  padding: 8rpx;
 }
 .wrp-call {
   width: 25%;
@@ -220,34 +212,34 @@ page {
 .tutor-call{
   display: block;
   text-align: center;
-  padding: 4px;
+  padding: 8rpx;
 }
 .tutor-comment {
   display: block;
-  font-size: 14px;
+  font-size: 28rpx;
   width: 100%;
   line-height: 1.2em;
-  padding: 4px 0 10px 4px;
+  padding: 8rpx 0 20rpx 8rpx;
 }
 /* Gradient buttons */
 .btn-gradient {
 	text-decoration: none;
 	color: white;
-	padding: 10px 30px;
+	padding: 20rpx 60rpx;
 	display: inline-block;
 	position: relative;
-	border: 1px solid rgba(0,0,0,0.21);
-	border-bottom: 4px solid rgba(0,0,0,0.21);
-	border-radius: 4px;
-	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+	border: 2rpx solid rgba(0,0,0,0.21);
+	border-bottom: 8rpx solid rgba(0,0,0,0.21);
+	border-radius: 8rpx;
+	text-shadow: 0 2rpx 0 rgba(0,0,0,0.15);
 }
 /* Gradient - ugly css is ugly */
 .btn-gradient {
-	margin: 5px;
+	margin: 10rpx;
 }
 .btn-gradient.mini {
-  padding: 4px 12px;  
-  font-size: 12px;
+  padding: 8rpx 24rpx;  
+  font-size: 24rpx;
 }
 .btn-gradient.cyan {
 	background: rgba(27,188,194,1);
