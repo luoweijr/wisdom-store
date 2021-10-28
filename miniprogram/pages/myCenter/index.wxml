@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="header-info">
+    <view class="header-myinfo">
+      <image class="header-info-pic" src="../../images/icon-usecenter.png"></image>
+    </view>
+    <view class="header-info-text">
+      <span class="header-info-name">微信用户</span>
+      <span class="header-info-login">点击授权</span>
+    </view>
+  </view>
+  <view class="my-service">我的服务</view>
+  <view class="platform-service">平台服务</view>
+  <view class="teacher-entr">教员入口</view>
+  <view class="footer-info">copyright@</view>
+</view>

@@ -1,0 +1,48 @@
+.header-info {
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-image: linear-gradient( #3963BC, #14b9de);
+}
+.header-myinfo {
+  width: 200rpx;
+  height: 200rpx;
+}
+.header-info-pic {
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  position: relative;
+  top: 30rpx;
+  left: 30rpx;
+}
+.header-info-text {
+  width: 260rpx;
+  text-align: left;
+}
+.header-info-name {
+  font-size: 32rpx;
+  font-weight: 400;
+  display: block;
+  margin-top: 35rpx;
+  text-align: center;
+  width: 170rpx;
+  padding: 5rpx;
+}
+.header-info-login {
+  color: aliceblue;
+  font-size: 32rpx;
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  margin-top: 10rpx;
+  border:5rpx solid aliceblue;
+  border-radius: 25rpx;
+  text-align: center;
+  width: 170rpx;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  line-height: 1.5;
+}

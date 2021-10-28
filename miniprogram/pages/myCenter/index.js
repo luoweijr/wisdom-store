@@ -1,6 +1,5 @@
-const deployServiceBarIndex = 3; 
+const myCenterBarIndex = 3; 
 
-// miniprogram/pages/deployService/index.js
 Page({
   /**
    * 页面的初始数据
@@ -29,7 +28,7 @@ Page({
   onShow: function () {
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
 			this.getTabBar().setData({
-				selected: deployServiceBarIndex
+				selected: myCenterBarIndex
 			})
 		}
   },

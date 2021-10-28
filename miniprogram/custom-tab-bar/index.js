@@ -25,7 +25,7 @@ Component({
 				"text": "教师入口"
 			},
 			{
-				"pagePath": "/pages/deployService/index",
+				"pagePath": "/pages/myCenter/index",
 				"iconPath": "../images/icon-bar4.png",
 				"selectedIconPath": "../images/icon-bar4.png",
 				"text": "个人中心"
