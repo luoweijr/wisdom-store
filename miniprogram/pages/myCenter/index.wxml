@@ -8,8 +8,19 @@
       <span class="header-info-login">点击授权</span>
     </view>
   </view>
-  <view class="my-service">我的服务</view>
-  <view class="platform-service">平台服务</view>
-  <view class="teacher-entr">教员入口</view>
-  <view class="footer-info">copyright@</view>
+  <view class="wrp-menu" wx:for="{{menuNav}}" wx:key="index">
+    <view class="wrp-menu-header">
+      <image class="wrp-menu-icon" src="../../images/icon-star.png"></image>
+      <span class="wrp-menu-text">{{item.title}}</span>
+    </view>
+    <view class="wrp-menu-contaier" >
+      <view class="wrp-menu-content" wx:for="{{item.menulist}}" wx:for-item="menulist" wx:key="index">
+        <image class="menulist-icon" src="{{menulist.icon}}"></image>
+        <view class="menulist-text">
+          {{menulist.text}}
+        </view>
+      </view>
+   </view> 
+  </view>
+  <view class="footer-info">copyright@包子教育科技有限公司</view>
 </view>

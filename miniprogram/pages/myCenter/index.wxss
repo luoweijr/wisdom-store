@@ -1,3 +1,10 @@
+.page {
+  width: auto;
+  height: auto;
+  background-color: rgb(241, 241, 241);
+}
+
+/* 顶部头像 */
 .header-info {
   height: auto;
   overflow: hidden;
@@ -45,4 +52,86 @@
   padding-top: 5rpx;
   padding-bottom: 5rpx;
   line-height: 1.5;
+}
+
+/* 中间的几列菜单 */
+.wrp-menu {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  height: 300rpx;
+  margin-top: 35rpx;
+  margin-left: 35rpx;
+  margin-right: 35rpx;
+  border:1rpx solid white;
+  border-radius: 20rpx;
+  background-color: white;
+  position: relative;
+}
+/* 菜单里面的分类小标题 */
+.wrp-menu-header {
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 5rpx solid rgb(241, 241, 241);
+  position: absolute;
+}
+.wrp-menu-icon {
+  display: block;
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  top: 23rpx;
+  left: 30rpx;
+}
+.wrp-menu-text {
+  display: block;
+  width: 250rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  position: absolute;
+  top: 20rpx;
+  left: 100rpx;
+  line-height: 50rpx;
+}
+/* 菜单里面的分类具体图标和内容 */
+.wrp-menu-contaier {
+  display: flex;
+  justify-content: normal;
+  flex-wrap: wrap;
+  height: 210rpx;
+  position:absolute;
+  top: 90rpx;
+  width: 100%;
+}
+.wrp-menu-content {
+  display: flex;
+  justify-content: center;
+  height: 210rpx;
+  width: 25%;
+}
+.menulist-icon {
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 40rpx;
+}
+.menulist-text {
+  display: block;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color: #000000;
+  position:absolute;
+  top: 130rpx;
+}
+
+/* 底部说明 */
+.footer-info {
+  text-align: center;
+  margin-top: 30rpx;
+  color: gray;
 }

@@ -5,7 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    menuNav: [
+      {title:'我的服务',menulist:[
+        {icon: '../../images/icon-13.png',text:'我的发布'},
+        {icon: '../../images/icon-14.png',text:'我的收藏'},
+        {icon: '../../images/icon-15.png',text:'推广合伙'},
+        {icon: '../../images/icon-16.png',text:'绑定信息'}
+      ]},
+      {title:'平台服务',menulist:[
+        {icon: '../../images/icon-17.png',text:'联系客服'},
+        {icon: '../../images/icon-18.png',text:'帮助中心'},
+        {icon: '../../images/icon-19.png',text:'关于我们'}
+      ]},
+      {title:'教员入口',menulist:[
+        {icon: '../../images/icon-20.png',text:'教员入住'},
+        {icon: '../../images/icon-21.png',text:'教员登录'}
+      ]}
+    ],
   },
 
   /**
