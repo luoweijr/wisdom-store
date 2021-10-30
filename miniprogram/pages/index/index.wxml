@@ -30,7 +30,6 @@
     <view class="tutor-title" >教师风采</view>
     <view class="tutor-content" wx:for="{{tutors}}">
       <view class="wrp-pic">
-        <!-- <span class="tutor-pic" style="background-image: url({{item.avatar}});"></span> -->
         <image class="tutor-pic" src="{{item.avatar}}"></image>
       </view>
       <view class="wrp-name">

@@ -1,0 +1,100 @@
+.page {
+  width: auto;
+  height: auto;
+}
+/* 分类的标题 */
+.classify-top {
+  background: #07c160;
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: white;
+}
+/* 分类里面的具体图标和内容 */
+.classify-contaier {
+  display: flex;
+  justify-content: normal;
+  flex-wrap: wrap;
+  height: 420rpx;
+  position: relative;
+  width: 100%;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  background-color: white;
+}
+.studentEnter-classify {
+  display: flex;
+  justify-content: center;
+  height: 210rpx;
+  width: 20%;
+  position: relative;
+}
+.classify-icon {
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 40rpx;
+}
+.classify-text {
+  display: block;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color: #000000;
+  position:absolute;
+  top: 130rpx;
+}
+/* 教员的标题 */
+.teacher-top {
+  background: #07c160;
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: white;
+}
+/* 教员里面的具体图标和内容 */
+.teacher-contaier {
+  display: flex;
+  justify-content: normal;
+  flex-wrap: wrap;
+  height: 420rpx;
+  position: relative;
+  width: 100%;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  background-color: white;
+}
+.studentEnter-teacher {
+  display: flex;
+  justify-content: center;
+  height: 210rpx;
+  width: 16.6%;
+  position: relative;
+}
+.teacher-icon {
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 40rpx;
+}
+.teacher-text {
+  display: block;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color: #000000;
+  position:absolute;
+  top: 130rpx;
+}

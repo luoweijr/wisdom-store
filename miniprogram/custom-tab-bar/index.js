@@ -13,13 +13,13 @@ Component({
 				"text": "我的首页"
 			},
 			{
-				"pagePath": "/pages/getOpenId/index",
+				"pagePath": "/pages/studentEnter/index",
 				"iconPath": "../images/icon-bar2.png",
 				"selectedIconPath": "../images/icon-bar2.png",
 				"text": "学员入口"
 			},
 			{
-				"pagePath": "/pages/getMiniProgramCode/index",
+				"pagePath": "/pages/teacherEnter/index",
 				"iconPath": "../images/icon-bar3.png",
 				"selectedIconPath": "../images/icon-bar3.png",
 				"text": "教师入口"

@@ -2,8 +2,8 @@
   "entryPagePath": "pages/index/index",
   "pages": [
     "pages/index/index",
-    "pages/getOpenId/index",
-    "pages/getMiniProgramCode/index",
+    "pages/studentEnter/index",
+    "pages/teacherEnter/index",
     "pages/myCenter/index",
     "pages/createCollection/index",
     "pages/uploadFile/index",
@@ -29,13 +29,13 @@
         "text": "我的首页"
       },
       {
-        "pagePath": "pages/getOpenId/index",
+        "pagePath": "pages/studentEnter/index",
         "iconPath": "./images/icon-bar2.png",
         "selectedIconPath": "./images/icon-bar2.png",
         "text": "学员入口"
       },
       {
-        "pagePath": "pages/getMiniProgramCode/index",
+        "pagePath": "pages/teacherEnter/index",
         "iconPath": "./images/icon-bar3.png",
         "selectedIconPath": "./images/icon-bar3.png",
         "text": "教师入口"

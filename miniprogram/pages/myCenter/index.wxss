@@ -1,7 +1,6 @@
 .page {
   width: auto;
   height: auto;
-  background-color: rgb(241, 241, 241);
 }
 
 /* 顶部头像 */
@@ -133,5 +132,6 @@
 .footer-info {
   text-align: center;
   margin-top: 30rpx;
+  margin-bottom: 30rpx;
   color: gray;
 }

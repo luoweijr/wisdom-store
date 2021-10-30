@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="classify-top">——  点击下述分类  ——</view>
+  <view class="classify-contaier" >
+    <view class="studentEnter-classify" wx:for="{{classifyNav}}"  wx:key="index">
+      <image class="classify-icon" src="{{item.icon}}"></image>
+      <view class="classify-text">
+        {{item.text}}
+      </view>
+    </view>
+  </view>
+  <view class="teacher-top">教员风采</view>
+  <view class="teacher-contaier" >
+    <view class="studentEnter-teacher" wx:for="{{teacherNav}}"  wx:key="index">
+      <image class="teacher-icon" src="{{item.icon}}"></image>
+      <view class="teacher-text">
+        {{item.text}}
+      </view>
+    </view>
+  </view>
+</view>
