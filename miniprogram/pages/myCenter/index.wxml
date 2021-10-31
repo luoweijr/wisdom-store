@@ -5,7 +5,7 @@
     </view>
     <view class="header-info-text">
       <span class="header-info-name">微信用户</span>
-      <span class="header-info-login">点击授权</span>
+      <span class="header-info-login" bindtap="getUserProfile">点击授权</span>
     </view>
   </view>
   <view class="wrp-menu" wx:for="{{menuNav}}" wx:key="index">
