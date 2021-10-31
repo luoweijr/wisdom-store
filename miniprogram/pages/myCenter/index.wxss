@@ -26,7 +26,7 @@
   border-radius: 100%;
 }
 .header-info-text {
-  width: 260rpx;
+  /* width: 260rpx; */
   text-align: left;
 }
 .header-info-name {
@@ -35,23 +35,31 @@
   display: block;
   margin-top: 42rpx;
   text-align: center;
-  width: 170rpx;
-  padding: 5rpx;
+  padding: 10rpx;
+}
+.refresh-info {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: 9rpx;
+  left: 16rpx;
 }
 .header-info-unlogin {
   color: aliceblue;
   font-size: 32rpx;
   font-weight: 400;
   display: block;
-  position: absolute;
-  margin-top: 10rpx;
+  position: relative;
+  left: -5rpx;
+  margin-top: 5rpx;
   border:5rpx solid aliceblue;
   border-radius: 25rpx;
   text-align: center;
-  width: 170rpx;
-  padding-top: 5rpx;
   padding-bottom: 5rpx;
   line-height: 1.5;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
 }
 .header-info-islogin {
   display: block;
