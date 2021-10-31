@@ -26,7 +26,7 @@ function getUserAuthStatus(event, context) {
   return new Promise((resolve, reject) => {
     db.collection('user').where({
       open_id: wxContext.OPENID,
-      is_auth: 1
+      is_auth: true
     }).count().then(
       res => {
         resolve({
