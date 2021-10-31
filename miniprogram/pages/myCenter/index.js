@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    avatarUrl: '../../images/icon-usecenter.png',
+    userName: '微信用户',
     menuNav: [
       {title:'我的服务',menulist:[
         {icon: '../../images/icon-13.png',text:'我的发布'},
@@ -32,7 +34,12 @@ Page({
       desc: '用于小程序中展示头像、昵称', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
         // 拿openId，然后把数据库中对应openI的的授权置位true
-        console.log(JSON.stringify(res))
+        // console.log(JSON.stringify(res))
+        this.setData({
+          avatarUrl: res.userInfo.avatarUrl,
+          userName: res.userInfo.nickName,
+          isAuth: true
+        })
       },
       fail: (res) => {
         // 用户不同意触发

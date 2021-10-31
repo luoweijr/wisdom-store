@@ -1,11 +1,12 @@
 <view class="page">
   <view class="header-info">
     <view class="header-myinfo">
-      <image class="header-info-pic" src="../../images/icon-usecenter.png"></image>
+      <image class="header-info-pic" src="{{avatarUrl}}"></image>
     </view>
     <view class="header-info-text">
-      <span class="header-info-name">微信用户</span>
-      <span class="header-info-login" bindtap="getUserProfile">点击授权</span>
+      <span class="header-info-name">{{userName}}</span>
+      <span wx:if="{{!isAuth}}" class="header-info-unlogin" bindtap="getUserProfile">点击授权</span>
+      <span wx:else class="header-info-islogin">欢迎♥您~</span>
     </view>
   </view>
   <view class="wrp-menu" wx:for="{{menuNav}}" wx:key="index">
