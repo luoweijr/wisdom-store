@@ -12,5 +12,16 @@
       "type": "user",
       "func": "getUserAuthStatus"
     }
+  },
+  {
+    "name": "更新用户信息",
+    "value": {
+      "type": "user",
+      "func": "updateUserInfo",
+      "userInfo": {
+        "name": "1111",
+        "open_id": "oVw7L5AILZCpDyFjiS5WOwPO4mts"
+      }
+    }
   }
 ]

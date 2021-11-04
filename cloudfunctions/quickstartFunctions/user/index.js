@@ -8,16 +8,16 @@ const db = cloud.database()
 const wxContext = cloud.getWXContext();
 
 function getUserList(event, context) {
-  return new Promise((resolve , reject) => {
+  return new Promise((resolve, reject) => {
     db.collection('user').get()
-    .then(data => {
-      resolve({
-        res: data,
-        code: 0,
-        msg: "成功"
+      .then(data => {
+        resolve({
+          res: data,
+          code: 0,
+          msg: "成功"
+        })
       })
-    })
-    .catch(err => reject(err))
+      .catch(err => reject(err))
   })
 }
 
@@ -25,7 +25,7 @@ function getUserList(event, context) {
 function getUserAuthStatus(event, context) {
   return new Promise((resolve, reject) => {
     db.collection('user').where({
-      open_id: wxContext.OPENID,
+      _id: wxContext.OPENID,
       is_auth: true
     }).count().then(
       res => {
@@ -39,6 +39,64 @@ function getUserAuthStatus(event, context) {
   })
 }
 
+// 更新用户授权数据
+function updateUserAuthStatus(event, context) {
+  const OPENID = wxContext.OPENID
+  return new Promise((resolve, reject) => {
+    db.collection('user').where({
+      _id: OPENID
+    }).get().then(
+      res => {
+        user = res.data.length > 0 ? res.data[0] : user
+        if (Object.keys(user).length === 0) {
+          db.collection('user').add({
+            data: {
+              _id: OPENID,
+              ...event.userInfo
+            }
+          }).then(
+            res => {
+              resolve({
+                res: '',
+                code: 0,
+                msg: '成功'
+              })
+            }
+          ).then(
+            err => reject(err)
+          )
+        } else {
+          db.collection('user').doc(OPENID).update({
+            data: {...event.userInfo}
+          }).then(
+            res => {
+              resolve({
+                res: '',
+                code: 0,
+                msg: '成功'
+              })
+            }
+          ).catch(err => reject(err))
+        }
+      }
+    ).catch(err => reject(err))
+
+    // db.collection('user').where({
+    //   open_id: wxContext.OPENID
+    // }).set({
+    //   data: event.userInfo
+    // }).then(
+    //   res => {
+    //     resolve({
+    //       res: '',
+    //       code: 0,
+    //       msg: "成功"
+    //     })
+    //   }
+    // ).catch(err => reject(err))
+  })
+}
+
 exports.main = (event, context) => {
   try {
     switch (event.func) {
@@ -46,6 +104,8 @@ exports.main = (event, context) => {
         return getUserList(event, context)
       case 'getUserAuthStatus':
         return getUserAuthStatus(event, context)
+      case 'updateUserAuthStatus':
+        return updateUserAuthStatus(event, context)
     }
   } catch (e) {
     return {

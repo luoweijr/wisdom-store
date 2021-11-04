@@ -33,12 +33,26 @@ Page({
     wx.getUserProfile({
       desc: '用于小程序中展示头像、昵称', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-        // 拿openId，然后把数据库中对应openI的的授权置位true
-        // console.log(JSON.stringify(res))
-        this.setData({
-          avatarUrl: res.userInfo.avatarUrl,
-          userName: res.userInfo.nickName,
-          isAuth: true
+        console.log(res)
+        wx.cloud.callFunction({
+          name: 'quickstartFunctions',
+          data: {
+            type: 'user',
+            func: "updateUserAuthStatus",
+            userInfo: {
+              is_auth: true,
+              wx_avatar: res.userInfo.avatarUrl,
+              wx_nickName: res.userInfo.nickName
+            }
+          }
+        }).then((resp) => {
+          this.setData({
+            isAuth: true,
+            userName: res.userInfo.nickName,
+            avatarUrl: res.userInfo.avatarUrl
+          })
+        }).catch((e) => {
+          console.log(e)
         })
       },
       fail: (res) => {
