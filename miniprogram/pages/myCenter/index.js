@@ -69,11 +69,13 @@ Page({
       name: 'quickstartFunctions',
       data: {
         type: 'user',
-        func: "getUserAuthStatus"
+        func: "getUserInfo"
       }
     }).then((resp) => {
       this.setData({
-        isAuth: resp.result.res
+        isAuth: resp.result.res.is_auth,
+        avatarUrl: resp.result.res.wx_avatar,
+        userName: resp.result.res.wx_nickName
       })
     }).catch((e) => {
       console.log(e)

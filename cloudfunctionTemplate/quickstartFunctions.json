@@ -1,27 +1,27 @@
 [
-  {
-    "name": "获取用户列表",
-    "value": {
-      "type": "user",
-      "func": "getUserList"
+    {
+        "name": "获取用户列表",
+        "value": {
+            "type": "user",
+            "func": "getUserList"
+        }
+    },
+    {
+        "name": "更新用户信息",
+        "value": {
+            "type": "user",
+            "func": "updateUserInfo",
+            "userInfo": {
+                "name": "1111",
+                "open_id": "oVw7L5AILZCpDyFjiS5WOwPO4mts"
+            }
+        }
+    },
+    {
+        "name": "获取用户信息",
+        "value": {
+            "type": "user",
+            "func": "getUserInfo"
+        }
     }
-  },
-  {
-    "name": "获取用户授权状态",
-    "value": {
-      "type": "user",
-      "func": "getUserAuthStatus"
-    }
-  },
-  {
-    "name": "更新用户信息",
-    "value": {
-      "type": "user",
-      "func": "updateUserInfo",
-      "userInfo": {
-        "name": "1111",
-        "open_id": "oVw7L5AILZCpDyFjiS5WOwPO4mts"
-      }
-    }
-  }
 ]

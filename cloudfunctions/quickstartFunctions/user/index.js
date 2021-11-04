@@ -21,16 +21,15 @@ function getUserList(event, context) {
   })
 }
 
-// 获取用户是否授权头像、昵称权限
-function getUserAuthStatus(event, context) {
+// 获取用户信息
+function getUserInfo(event, context) {
   return new Promise((resolve, reject) => {
     db.collection('user').where({
       _id: wxContext.OPENID,
-      is_auth: true
-    }).count().then(
+    }).get().then(
       res => {
         resolve({
-          res: res.total > 0,
+          res: res.data.length > 0 ? res.data[0] : {},
           code: 0,
           msg: "成功"
         })
@@ -80,20 +79,6 @@ function updateUserAuthStatus(event, context) {
         }
       }
     ).catch(err => reject(err))
-
-    // db.collection('user').where({
-    //   open_id: wxContext.OPENID
-    // }).set({
-    //   data: event.userInfo
-    // }).then(
-    //   res => {
-    //     resolve({
-    //       res: '',
-    //       code: 0,
-    //       msg: "成功"
-    //     })
-    //   }
-    // ).catch(err => reject(err))
   })
 }
 
@@ -102,8 +87,8 @@ exports.main = (event, context) => {
     switch (event.func) {
       case 'getUserList':
         return getUserList(event, context)
-      case 'getUserAuthStatus':
-        return getUserAuthStatus(event, context)
+      case 'getUserInfo':
+        return getUserInfo(event, context)
       case 'updateUserAuthStatus':
         return updateUserAuthStatus(event, context)
     }
