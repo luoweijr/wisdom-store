@@ -1,11 +1,11 @@
 const cloud = require('wx-server-sdk')
+OPENID = ''
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
 })
 
 const db = cloud.database()
-const wxContext = cloud.getWXContext();
 
 function getUserList(event, context) {
   return new Promise((resolve, reject) => {
@@ -25,7 +25,7 @@ function getUserList(event, context) {
 function getUserInfo(event, context) {
   return new Promise((resolve, reject) => {
     db.collection('user').where({
-      _id: wxContext.OPENID,
+      _id: OPENID,
     }).get().then(
       res => {
         resolve({
@@ -40,7 +40,6 @@ function getUserInfo(event, context) {
 
 // 更新用户授权数据
 function updateUserAuthStatus(event, context) {
-  const OPENID = wxContext.OPENID
   return new Promise((resolve, reject) => {
     db.collection('user').where({
       _id: OPENID
@@ -83,6 +82,8 @@ function updateUserAuthStatus(event, context) {
 }
 
 exports.main = (event, context) => {
+  const wxContext = cloud.getWXContext()
+  OPENID = wxContext.OPENID
   try {
     switch (event.func) {
       case 'getUserList':
