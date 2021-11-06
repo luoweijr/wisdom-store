@@ -46,7 +46,7 @@ function updateUserAuthStatus(event, context) {
       _id: OPENID
     }).get().then(
       res => {
-        user = res.data.length > 0 ? res.data[0] : user
+        user = res.data.length > 0 ? res.data[0] : {}
         if (Object.keys(user).length === 0) {
           db.collection('user').add({
             data: {
