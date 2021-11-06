@@ -1,11 +1,33 @@
-<view>
-  <view class="top_tip">可通过云函数免接口调用凭证，直接生成小程序码。</view>
-  <view class="box_text" wx:if="{{!codeSrc}}">小程序码将展示在这里</view>
-  <view  wx:if="{{codeSrc}}" class="code_box">
-    <image class="code_img" src="{{codeSrc}}"></image>
+<view class="container">
+  <view class="page-section page-section-spacing swiper">
+      <swiper class="slide-image1" style="height: 290rpx;"
+        indicator-dots="true" autoplay="true" circular="true" interval="2000" duration="500" easing-function="easeInOutCubic">
+        <block wx:for="{{imageUrls}}" wx:key="key">
+          <swiper-item class="slide-image2">
+            <image src="{{item}}" class="slide-image3" />
+          </swiper-item>
+        </block>
+      </swiper>
   </view>
-  <view class="button" bindtap="getCodeSrc" wx:if="{{!haveGetCodeSrc}}">生成小程序码</view>
-  <view class="button_clear" bindtap="clearCodeSrc" wx:if="{{haveGetCodeSrc}}">清空</view>
-  <view class="tip">在”资源管理器>cloudfunctions>quickstartFunctions>getMiniProgramCode>index.js“找到获取小程序码函数，体验该能力</view>
-  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
+
+  <view class="tutor-enter">
+    <view class="tutor-enter-wrp">
+      <a href="#" class="tutor-enter-btn">我要入驻</a>
+      <span class="tutor-enter-text"> • 恭喜【<p>snow</p>】成功入驻</span>
+    </view>
+  </view>
+
+  <view class="tutor-order">家教订单</view>
+
+  <view class="choosestudent-content" wx:for="{{studentList}}" wx:key="key">
+    <view class="wrp-pic"><image class="choosestudent-pic" src="{{item.avatar}}"></image></view>
+    <view class="wrp-name">
+      <span class="choosestudent-name">{{item.name}}</span>
+    </view>
+    <view class="wrp-call">
+      <a href="#" class="btn-gradient cyan mini"><image class="choosestudent-phone" src="../../images/icon-phone.png"></image>拨打电话</a>
+    </view>
+    <text class="choosestudent-comment">{{item.comment}}</text>
+  </view>
+
 </view>

@@ -6,9 +6,7 @@ Page({
    */
   data: {
     showUploadTip: false,
-    haveGetCodeSrc: false,
-    envId: '',
-    codeSrc: ''
+    imageUrls: ['../../images/pic-1.jpg', '../../images/pic-2.jpg', '../../images/pic-3.jpg'],
   },
 
   onLoad(options) {
@@ -17,44 +15,27 @@ Page({
     })
   },
 	onShow: function () {
-		if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+    this.activePageTabBar()
+    wx.cloud.callFunction({
+      name: 'quickstartFunctions',
+      data: {
+        type: 'user',
+        func: "getUserList"
+      }
+    }).then((resp) => {
+      this.setData({
+        studentList: resp.result.res.data
+      })
+    }).catch((e) => {
+      console.log(e)
+    })
+	},
+  activePageTabBar() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
 			this.getTabBar().setData({
 				selected: getMiniProgramCodeBarIndex
 			})
 		}
-	},
-  getCodeSrc() {
-    wx.showLoading({
-      title: '',
-    })
-    wx.cloud.callFunction({
-      name: 'quickstartFunctions',
-      config: {
-        env: this.data.envId
-      },
-      data: {
-        type: 'getMiniProgramCode'
-      }
-    }).then((resp) => {
-      this.setData({
-        haveGetCodeSrc: true,
-        codeSrc: resp.result
-      })
-      wx.hideLoading()
-    }).catch((e) => {
-      console.log(e)
-      this.setData({
-        showUploadTip: true
-      })
-      wx.hideLoading()
-    })
-  },
-
-  clearCodeSrc() {
-    this.setData({
-      haveGetCodeSrc: false,
-      codeSrc: ''
-    })
   }
 
 })

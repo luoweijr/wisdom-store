@@ -1,58 +1,211 @@
-.tip {
-  font-size: 23rpx;
-  color: rgba(0, 0, 0, 0.5);
-  width: 90%;
-  text-align: center;
-  margin: 30rpx auto 0 auto;
+.container {
+  height: auto;
 }
-
-.top_tip {
+.page-section{
+  width: 100%;
+  text-align: center;
+  height: 366rpx;
+  background-image: linear-gradient( #3963BC, #14b9de);
+}
+.page-section_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.page-section-spacing{
+  box-sizing: border-box;
+  padding: 0;
+}
+.page-section-title{
   font-size: 28rpx;
-  color: rgba(0, 0, 0, 0.5);
-  width: 90%;
-  text-align: left;
-  margin-top: 30rpx;
-  margin-left: 20rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.page-section-gap .page-section-title{
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.box_text {
-  background-color: white;
-  text-align: center;
-  padding: 300rpx 0;
-  margin-top: 30rpx;
-  color: rgba(0, 0, 0, 0.5);
-}
 
-.code_box {
-  text-align: center;
-  background-color: white;
-  margin-top: 30rpx;
-  padding: 17rpx 0;
+.page-section-title{
+  padding: 0;
 }
-
-.code_img {
-  width: 600rpx;
-  height: 600rpx;
+.swiper-item{
+  display: block;
+  height: 290rpx;
 }
-
-.button {
-  width: 300rpx;
-  text-align: center;
-  margin: 20% auto 0 auto;
-  height: 80rpx;
+.slide-image1{
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+.slide-image2{
+  border-radius: 10rpx;
+}
+.slide-image3{
+  border-radius: 10rpx;
+  height: 290rpx;
+}
+/* 我要入驻 */
+.tutor-enter {
+  background: #ffffff;
+  width: 100%;
+  height: 130rpx;
+  font-size: 40rpx;
+  font-weight: 500;
   color: white;
-  border-radius: 5px;
+  margin-bottom: 20rpx;
+}
+.tutor-enter-wrp {
+  height: 130rpx;
+  padding-left: 30rpx;
+  position: absolute;
+}
+.tutor-enter-btn {
+  position: relative;
+  top: 25rpx;
+  display: block;
+  text-align: center;
+  border-radius: 10rpx;
+  width: 200rpx;
+  height: 80rpx;
   line-height: 80rpx;
-  background-color: #07c160;
+  font-size: 36rpx;
+  background: rgba(7,173,96,1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(7,173,96,1)), to(rgba(18,169,99,1)));
+	background: -webkit-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -moz-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -o-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12a963', endColorstr='#12a963', GradientType=0);
+}
+.tutor-enter-text {
+  color: black;
+  font-size: 32rpx;
+  display: inline-block;
+  position: relative;
+  width: 360rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  left: 220rpx;
+  top: -52rpx;
+}
+.tutor-enter-text p {
+  color: rgba(7,173,96,1);
+}
+/* 家教订单 */
+.tutor-order {
+  width: 100%;
+  height: 110rpx;
+  text-align: center;
+  line-height: 110rpx;
+  font-size: 40rpx;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 20rpx;
+  background: rgba(7,173,96,1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(7,173,96,1)), to(rgba(18,169,99,1)));
+	background: -webkit-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -moz-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -o-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12a963', endColorstr='#12a963', GradientType=0);
 }
 
-.button_clear {
-  width: 300rpx;
+.choosestudent-content {
+  height: auto;
+  padding-top: 4rpx;
+  margin-bottom: 30rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.wrp-pic {
+  width: 24%;
+}
+.choosestudent-pic {
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+}
+.wrp-name {
+  width: 49%;
+  text-align: left;
+}
+.choosestudent-name {
+  font-size: 36rpx;
+  font-weight: 800;
+  display: block;
+  padding: 8rpx;
+  margin-top: 20rpx;
+}
+.wrp-call {
+  width: 25%;
+}
+.choosestudent-call{
+  display: block;
   text-align: center;
-  margin: 20% auto 0 auto;
-  height: 80rpx;
-  color: #07c160;
-  border-radius: 5px;
-  line-height: 80rpx;
-  background-color: rgba(0, 0, 0, 0.03);
+  padding: 8rpx;
+}
+.choosestudent-comment {
+  display: block;
+  font-size: 28rpx;
+  width: 100%;
+  line-height: 1.2em;
+  padding: 8rpx 0 20rpx 8rpx;
+}
+/* Gradient buttons */
+.btn-gradient {
+	text-decoration: none;
+	color: white;
+	padding: 20rpx 60rpx;
+	display: inline-block;
+	position: relative;
+	border: 2rpx solid rgba(0,0,0,0.21);
+	border-bottom: 8rpx solid rgba(0,0,0,0.21);
+	border-radius: 8rpx;
+  text-shadow: 0 2rpx 0 rgba(0,0,0,0.15);
+}
+/* Gradient - ugly css is ugly */
+.btn-gradient {
+  margin-top: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.choosestudent-phone {
+  display: inline-block;
+  width: 25rpx;
+  height: 25rpx;
+  position: relative;
+  top: 4rpx;
+  left: -4rpx;
+}
+.btn-gradient.mini {
+  padding: 8rpx 24rpx;  
+  font-size: 24rpx;
+}
+.btn-gradient.cyan {
+	background: rgba(7,173,96,1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(7,173,96,1)), to(rgba(18,169,99,1)));
+	background: -webkit-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -moz-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -o-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12a963', endColorstr='#12a963', GradientType=0);
+}
+.btn-gradient.cyan:active {
+  background: rgba(18,169,99,1);
 }

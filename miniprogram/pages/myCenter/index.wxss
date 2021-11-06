@@ -28,10 +28,11 @@
 .header-info-text {
   /* width: 260rpx; */
   text-align: left;
+  color: aliceblue;
 }
 .header-info-name {
-  font-size: 32rpx;
-  font-weight: 400;
+  font-size: 36rpx;
+  font-weight: 500;
   display: block;
   margin-top: 42rpx;
   text-align: center;
@@ -64,8 +65,9 @@
 .header-info-islogin {
   display: block;
   position: absolute;
-  margin-top: 5rpx;
   margin-left: 6rpx;
+  font-size: 32rpx;
+  font-weight: 500;
 }
 /* 中间的几列菜单 */
 .wrp-menu {

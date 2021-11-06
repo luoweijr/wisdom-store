@@ -4,7 +4,6 @@
 }
 /* 分类的标题 */
 .classify-top {
-  background: #07c160;
   width: 100%;
   height: 90rpx;
   text-align: center;
@@ -12,6 +11,13 @@
   font-size: 36rpx;
   font-weight: 600;
   color: white;
+  background: rgba(7,173,96,1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(7,173,96,1)), to(rgba(18,169,99,1)));
+	background: -webkit-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -moz-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -o-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12a963', endColorstr='#12a963', GradientType=0);
 }
 /* 分类里面的具体图标和内容 */
 .classify-contaier {
@@ -52,7 +58,6 @@
 }
 /* 教员的标题 */
 .teacher-top {
-  background: #07c160;
   width: 100%;
   height: 90rpx;
   text-align: center;
@@ -60,6 +65,13 @@
   font-size: 36rpx;
   font-weight: 600;
   color: white;
+  background: rgba(7,173,96,1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(7,173,96,1)), to(rgba(18,169,99,1)));
+	background: -webkit-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -moz-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: -o-linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	background: linear-gradient(rgba(7,173,96,1) 0%, rgba(18,169,99,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12a963', endColorstr='#12a963', GradientType=0);
 }
 /* 教员里面的具体图标和内容 */
 .teacher-contaier {
