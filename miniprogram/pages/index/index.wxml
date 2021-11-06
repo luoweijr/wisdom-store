@@ -3,7 +3,7 @@
   <view class="page-section page-section-spacing swiper">
       <swiper class="slide-image1" style="height: 290rpx;"
         indicator-dots="true" autoplay="true" circular="true" interval="2000" duration="500" easing-function="easeInOutCubic">
-        <block wx:for="{{imageUrls}}">
+        <block wx:for="{{imageUrls}}" wx:key="key">
           <swiper-item class="slide-image2">
             <image src="{{item}}" class="slide-image3" />
           </swiper-item>
@@ -28,7 +28,7 @@
   
   <view class="tutor-container">
     <view class="tutor-title" >教师风采</view>
-    <view class="tutor-content" wx:for="{{tutors}}">
+    <view class="tutor-content" wx:for="{{tutors}}" wx:key="key">
       <view class="wrp-pic">
         <image class="tutor-pic" src="{{item.avatar}}"></image>
       </view>
@@ -36,7 +36,7 @@
         <span class="tutor-name">{{item.name}}</span>
       </view>
       <view class="wrp-call">
-        <a href="#" class="btn-gradient cyan mini">拨打电话</a>
+        <a href="#" class="btn-gradient cyan mini"><image class="wrp-phone" src="../../images/icon-phone.png"></image>拨打电话</a>
       </view>
         <text class="tutor-comment">{{item.comment}}</text>
     </view>

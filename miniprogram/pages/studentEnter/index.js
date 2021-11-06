@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    navState: 0,
     classifyNav: [
       {icon: '../../images/classify-0.png',text:'学龄前'},
       {icon: '../../images/classify-1.png',text:'小学'},
@@ -31,50 +32,36 @@ Page({
       {icon: '../../images/teacher-11.png',text:'音体美'}
     ]
   },
-
-  onLoad(options) {
+  //点击导航
+  navSwitch: function(e) {
+    let index = e.currentTarget.dataset.index;
     this.setData({
-      envId: options.envId
+      navState:index
     })
   },
+
 	onShow: function () {
-		if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-			this.getTabBar().setData({
-				selected: getOpenIdBarIndex
-			})
-		}
-	},
-  getOpenId() {
-    wx.showLoading({
-      title: '',
-    })
-   wx.cloud.callFunction({
+		this.activePageTabBar()
+    wx.cloud.callFunction({
       name: 'quickstartFunctions',
-      config: {
-        env: this.data.envId
-      },
       data: {
-        type: 'getOpenId'
+        type: 'user',
+        func: "getUserList"
       }
     }).then((resp) => {
       this.setData({
-        haveGetOpenId: true,
-        openId: resp.result.openid
+        tutors: resp.result.res.data
       })
-     wx.hideLoading()
-   }).catch((e) => {
-      this.setData({
-        showUploadTip: true
-      })
-     wx.hideLoading()
+    }).catch((e) => {
+      console.log(e)
     })
-  },
+	},
 
-  clearOpenId() {
-    this.setData({
-      haveGetOpenId: false,
-      openId: ''
-    })
+  activePageTabBar() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+			this.getTabBar().setData({
+				selected: getOpenIdBarIndex
+			})
+    }
   }
-
 })

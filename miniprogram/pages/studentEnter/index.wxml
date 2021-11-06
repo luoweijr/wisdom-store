@@ -17,4 +17,25 @@
       </view>
     </view>
   </view>
+  
+  <view class="chooseteacher-container">
+    <view class="chooseteacher-title" >
+      <span bindtap="navSwitch" data-index="0" class="chooseteacher-title-text {{navState==0 ? 'choosed':''}}">附近</span>
+      <span bindtap="navSwitch" data-index="1" class="chooseteacher-title-text {{navState==1 ? 'choosed':''}}">新入</span>
+      <span bindtap="navSwitch" data-index="2" class="chooseteacher-title-text {{navState==2 ? 'choosed':''}}">热门</span>
+    </view>
+    <view class="chooseteacher-content" wx:for="{{tutors}}" wx:key="key">
+      <view class="wrp-pic">
+        <image class="chooseteacher-pic" src="{{item.avatar}}"></image>
+      </view>
+      <view class="wrp-name">
+        <span class="chooseteacher-name">{{item.name}}</span>
+      </view>
+      <view class="wrp-call">
+        <a href="#" class="btn-gradient cyan mini"><image class="chooseteacher-phone" src="../../images/icon-phone.png"></image>拨打电话</a>
+      </view>
+        <text class="chooseteacher-comment">{{item.comment}}</text>
+    </view>
+  </view>
+
 </view>

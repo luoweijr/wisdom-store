@@ -203,6 +203,7 @@ page {
   font-weight: 800;
   display: block;
   padding: 8rpx;
+  margin-top: 20rpx;
 }
 .wrp-call {
   width: 25%;
@@ -233,7 +234,17 @@ page {
 }
 /* Gradient - ugly css is ugly */
 .btn-gradient {
-	margin: 10rpx;
+  margin-top: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.wrp-phone {
+  display: inline-block;
+  width: 25rpx;
+  height: 25rpx;
+  position: relative;
+  top: 4rpx;
+  left: -4rpx;
 }
 .btn-gradient.mini {
   padding: 8rpx 24rpx;  
