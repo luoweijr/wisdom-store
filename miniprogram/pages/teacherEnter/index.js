@@ -19,8 +19,8 @@ Page({
     wx.cloud.callFunction({
       name: 'quickstartFunctions',
       data: {
-        type: 'user',
-        func: "getUserList"
+        type: 'stu',
+        func: "getOrderList"
       }
     }).then((resp) => {
       this.setData({
